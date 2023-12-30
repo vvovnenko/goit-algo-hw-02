@@ -9,3 +9,16 @@ def is_palindrome(string: str) -> bool:
             return False
 
     return True
+
+
+while True:
+    user_input = input("Enter a string ('q' to exit): ")
+
+    if user_input == 'q':
+        break
+
+    if is_palindrome(user_input):
+        print('The string is a palindrome')
+    else:
+        print('The string is NOT a palindrome')
+
