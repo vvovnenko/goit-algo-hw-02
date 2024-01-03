@@ -2,9 +2,9 @@ from collections import deque
 
 
 def is_palindrome(string: str) -> bool:
-    deq = deque(list(string.strip().lower()))
+    deq = deque(list(string.lower().replace(' ', '')))
 
-    for _ in range(int(len(deq)/2)):
+    while len(deq) > 1:
         if deq.pop() != deq.popleft():
             return False
 
@@ -18,7 +18,7 @@ while True:
         break
 
     if is_palindrome(user_input):
-        print('The string is a palindrome')
+        print('True')
     else:
-        print('The string is NOT a palindrome')
+        print('False')
 

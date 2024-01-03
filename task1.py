@@ -31,7 +31,14 @@ def process_request():
         print(f'Order from customer {order.full_name} was processed')
 
 
-while True:
-    generate_request()
-    process_request()
-    time.sleep(2)
+def simulate():
+    while True:
+        generate_request()
+        process_request()
+        time.sleep(2)
+
+
+try:
+    simulate()
+except KeyboardInterrupt:
+    print("Keyboard interrupt exception caught")
